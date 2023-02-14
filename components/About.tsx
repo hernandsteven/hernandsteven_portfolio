@@ -75,7 +75,7 @@ export default function About() {
           <h1 className="text-xl font-bold"> Languages I Speak </h1>
           <motion.div
             initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1, y: 0, transition: { delay: 0.3 } }}
+            whileInView={{ opacity: 1, y: 0, transition: { delay: 0.5 } }}
             viewport={{ margin: '0px 100px -50px 0px' }}
             className="flex flex-wrap gap-2 "
           >
@@ -93,7 +93,7 @@ export default function About() {
               opacity: 1,
               y: 0,
               transition: {
-                delay: 0.3,
+                delay: 0.5,
               },
             }}
             viewport={{ margin: '0px 100px -50px 0px' }}
