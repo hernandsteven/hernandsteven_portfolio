@@ -1,5 +1,8 @@
 'use client'
 import Tag from './Tag'
+import { motion, useInView } from 'framer-motion'
+import { useRef } from 'react'
+import { headerSlideInFromLeft } from '@/util/animations'
 
 const languages = [
   'JavaScript',
@@ -22,27 +25,38 @@ const technologies = [
   'Redux',
 ]
 
-const downloadPDF = () => {
-  fetch('/STEVENHERNANDEZ.pdf').then((response) => {
-    response.blob().then((blob) => {
-      const fileURL = window.URL.createObjectURL(blob)
-      let alink = document.createElement('a')
-      alink.href = fileURL
-      alink.download = 'STEVENHERNANDEZ.pdf'
-      alink.click()
-    })
-  })
-}
-
 export default function About() {
+  const aboutRef = useRef(null)
+  const isInView = useInView(aboutRef, {
+    once: false,
+    margin: '0px 100px -50px 0px',
+  })
+
+  const downloadPDF = () => {
+    fetch('/STEVENHERNANDEZ.pdf').then((response) => {
+      response.blob().then((blob) => {
+        const fileURL = window.URL.createObjectURL(blob)
+        let alink = document.createElement('a')
+        alink.href = fileURL
+        alink.download = 'STEVENHERNANDEZ.pdf'
+        alink.click()
+      })
+    })
+  }
   return (
     <section
       id="about"
       className="flex min-h-screen flex-col justify-center gap-4 border-t border-dashed border-t-white "
     >
-      <h1 className="text-2xl">
+      <motion.h1
+        ref={aboutRef}
+        variants={headerSlideInFromLeft}
+        initial="initial"
+        animate={isInView ? 'animate' : 'initial'}
+        className=" mt-20 text-2xl "
+      >
         <b className="">About Me</b>
-      </h1>
+      </motion.h1>
       <p>
         Since I was a child, I&apos;ve been fascinated by technology. I have
         fond memories of when my mom bought me a Dell desktop computer when I
@@ -59,20 +73,36 @@ export default function About() {
       <div className="mt-4 grid grid-cols-2 border-t border-dashed">
         <div className="flex h-28 flex-col gap-4 border-r border-dashed p-4">
           <h1 className="text-xl font-bold"> Languages I Speak </h1>
-          <div className="flex flex-wrap gap-2 ">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1, y: 0, transition: { delay: 0.3 } }}
+            viewport={{ margin: '0px 100px -50px 0px' }}
+            className="flex flex-wrap gap-2 "
+          >
             {languages.map((language) => (
               <Tag key={language} tag={language} />
             ))}
-          </div>
+          </motion.div>
         </div>
         <div className="flex flex-col gap-4 p-4 ">
           <h1 className="text-xl font-bold"> Technologies I Use</h1>
 
-          <div className="flex flex-wrap gap-2 ">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                delay: 0.3,
+              },
+            }}
+            viewport={{ margin: '0px 100px -50px 0px' }}
+            className="flex flex-wrap gap-2 "
+          >
             {technologies.map((tech) => (
               <Tag key={tech} tag={tech} />
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
       <div className="mt-4 flex flex-col items-center gap-2">

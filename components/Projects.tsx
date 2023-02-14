@@ -1,6 +1,10 @@
+'use client'
 import ProjectCard from './ProjectCard'
 import visualizer from '../public/visualizer.png'
 import battlezone from '../public/battlezone.png'
+import { motion, useInView } from 'framer-motion'
+import { useRef } from 'react'
+import { headerSlideInFromLeft } from '@/util/animations'
 
 const projectData = [
   {
@@ -22,14 +26,26 @@ const projectData = [
 ]
 
 export default function Projects() {
+  const projectsRef = useRef(null)
+  const isInView = useInView(projectsRef, {
+    once: false,
+
+    margin: '0px 100px -50px 0px',
+  })
   return (
     <section
       id="projects"
       className="flex w-full flex-col justify-center gap-4 border-t border-dashed border-t-white "
     >
-      <h1 className="my-8 text-2xl">
+      <motion.h1
+        ref={projectsRef}
+        variants={headerSlideInFromLeft}
+        initial="initial"
+        animate={isInView ? 'animate' : 'initial'}
+        className="my-8 text-2xl"
+      >
         <b className="">Projects </b>
-      </h1>
+      </motion.h1>
 
       <div className="flex flex-col gap-24 ">
         {projectData.map(({ name, description, href, imageSrc, tags }) => (
