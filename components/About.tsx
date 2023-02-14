@@ -31,11 +31,11 @@ export default function About() {
         <b className="">About Me</b>
       </h1>
       <p>
-        Since I was a child, I've been fascinated by technology. I have fond
-        memories of when my mom bought me a Dell desktop computer when I was 10
-        years old. I used to download games and experiment with the game files
-        to see what would happen if I changed them. My passion for technology
-        has only grown over the years.
+        Since I was a child, I&apos;ve been fascinated by technology. I have
+        fond memories of when my mom bought me a Dell desktop computer when I
+        was 10 years old. I used to download games and experiment with the game
+        files to see what would happen if I changed them. My passion for
+        technology has only grown over the years.
         <br />
         <br />
         In my sophomore year of high school, I discovered programming, and it
