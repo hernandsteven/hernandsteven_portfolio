@@ -3,6 +3,7 @@ import Tag from './Tag'
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { headerSlideInFromLeft } from '@/util/animations'
+import { Download } from './Icons'
 
 const languages = [
   'JavaScript',
@@ -108,8 +109,9 @@ export default function About() {
       <div className="mt-4 flex flex-col items-center gap-2">
         <button
           onClick={() => downloadPDF()}
-          className="mt-10 w-fit rounded-md border border-gray-800 bg-gradient-to-t from-gray-800 to-transparent p-2 text-white shadow-sm shadow-gray-800 transition  ease-in-out hover:bg-gray-700"
+          className="mt-10 flex w-fit flex-row items-center gap-2 rounded-md border border-gray-800 bg-gradient-to-t from-gray-800 to-transparent p-2 text-white shadow-sm shadow-gray-800 transition  ease-in-out hover:bg-gray-700"
         >
+          <Download />
           Download Resume
         </button>
       </div>
