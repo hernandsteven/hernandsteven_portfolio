@@ -108,7 +108,7 @@ export default function About() {
       <div className="mt-4 flex flex-col items-center gap-2">
         <button
           onClick={() => downloadPDF()}
-          className="w-fit rounded-md bg-gray-800 p-2 text-white transition  ease-in-out hover:bg-gray-700"
+          className="mt-10 w-fit rounded-md border border-gray-800 bg-gradient-to-t from-gray-800 to-transparent p-2 text-white shadow-sm shadow-gray-800 transition  ease-in-out hover:bg-gray-700"
         >
           Download Resume
         </button>
