@@ -13,7 +13,8 @@ const projectData = [
   },
   {
     name: 'Pathfinding Visualizer',
-    description: 'This is a project',
+    description:
+      'A React application that visualizes common searching algorithms.',
     href: 'https://hernandsteven.github.io/visualizer/',
     imageSrc: visualizer,
     tags: ['React', 'JavaScript'],
@@ -24,7 +25,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="flex min-h-screen w-full flex-col justify-center gap-4 border-t border-t-white "
+      className="flex w-full flex-col justify-center gap-4 border-t border-t-white "
     >
       <h1 className="my-8 text-2xl">
         <b className="">Projects </b>

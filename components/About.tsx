@@ -8,28 +8,29 @@ export default function About() {
         <b className="">About Me</b>
       </h1>
       <p>
-        Ever since I was a kid, I've always been fascinated by technology. I
-        remember when I was 10 years old and my mom bought me a Dell desktop
-        computer. I would download games and play them on my computer. I would
-        tinker with the game files and try to figure out if I change files in
-        the game, will it break the game? Over the years my passion for
-        technology grew.
+        Since I was a child, I've been fascinated by technology. I have fond
+        memories of when my mom bought me a Dell desktop computer when I was 10
+        years old. I used to download games and experiment with the game files
+        to see what would happen if I changed them. My passion for technology
+        has only grown over the years.
         <br />
         <br />
-        In my sophmore year of highschool I was introduced to programming. From
-        there on out I knew that I wanted to be a software engineer. I started
-        learning how to code and I fell in love with it. I started learning how
-        to code in Java and that gave me the foundation to learn other
-        programming languages.
+        In my sophomore year of high school, I discovered programming, and it
+        was love at first sight. I knew right away that I wanted to be a
+        software engineer. I started learning how to code, beginning with Java,
+        which gave me the foundation to learn other programming languages.
         <br />
         <br />
-        In college I started learning Data Structures and Algorithms. I dipped
-        my toes into the world of software engineering interviews and Full-stack
-        development.
+        During my college years, I delved deeper into software engineering by
+        studying data structures and algorithms. I also started exploring
+        software engineering interviews and full-stack development.
       </p>
-      <button className="mt-12 w-fit rounded-md  bg-gray-800 p-2 text-white transition  ease-in-out hover:bg-gray-700">
-        Download Resume
-      </button>
+      <div className="mt-4 flex flex-col items-center gap-2">
+        <p>Want a deeper view of my background? </p>
+        <button className="w-fit rounded-md bg-gray-800 p-2 text-white transition  ease-in-out hover:bg-gray-700">
+          Download Resume
+        </button>
+      </div>
     </section>
   )
 }

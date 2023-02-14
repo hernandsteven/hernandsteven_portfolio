@@ -20,7 +20,7 @@ export default function ProjectCard({
   return (
     <Link
       href={href ?? 'https://google.com'}
-      className="flex cursor-pointer  rounded-md border-[0.1px] border-gray-800 p-2 shadow-xl shadow-gray-800 transition ease-in-out hover:scale-105 md:flex-row "
+      className=" flex max-w-full cursor-pointer  rounded-md border-[0.1px] border-gray-800 p-2 shadow-xl shadow-gray-800 transition ease-in-out hover:scale-105 md:flex-row "
       style={{ overflow: 'hidden' }}
     >
       <div className="flex w-full flex-col justify-between md:w-1/2">

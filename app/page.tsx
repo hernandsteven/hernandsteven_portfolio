@@ -25,7 +25,7 @@ const socials = [
 
 const Home = () => {
   return (
-    <div className="flex flex-col gap-28 md:pl-8">
+    <div className="mt-2 flex flex-col gap-28 md:mt-0 md:pl-8">
       <section className="flex w-full flex-col gap-4 ">
         <h1 className="text-4xl font-bold">Steven Hernandez</h1>
         <p>

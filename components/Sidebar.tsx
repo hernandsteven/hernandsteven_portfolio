@@ -20,13 +20,13 @@ export default function Sidebar() {
 
   return (
     <aside>
-      <div className="md:sticky md:top-20">
-        <h1 className="px-4 pb-4 text-6xl font-bold ">sh.</h1>
+      <div className="flex max-w-full flex-row justify-between md:sticky md:top-20 md:flex-col ">
+        <h1 className="px-4 pb-4 text-4xl font-bold md:text-6xl ">sh.</h1>
         <div className="flex flex-row  justify-center  md:justify-start md:border-r md:border-r-gray-800">
-          <nav className="flex flex-row px-4 md:flex-col ">
+          <nav className="flex flex-row px-0 md:flex-col md:px-4 ">
             {navItems.map(({ name, href }) => (
               <a
-                className=" mx-4 rounded-md text-2xl md:mx-0  md:my-12 "
+                className=" mx-4 my-auto  rounded-md text-xl md:mx-0  md:my-12 md:text-2xl "
                 href={href}
                 key={name}
               >
