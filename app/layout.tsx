@@ -1,6 +1,5 @@
 import Footer from '@/components/Footer'
 import Sidebar from '@/components/Sidebar'
-import Head from 'next/head'
 import './globals.css'
 
 export default function RootLayout({

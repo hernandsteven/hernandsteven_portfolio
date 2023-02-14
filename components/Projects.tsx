@@ -19,7 +19,7 @@ const projectData = [
     imageSrc: visualizer,
     tags: ['React', 'JavaScript'],
   },
-] as const
+]
 
 export default function Projects() {
   return (

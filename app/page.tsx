@@ -21,7 +21,7 @@ const socials = [
     href: 'mailto:hernandsteven@gmail.com',
     icon: <Mail />,
   },
-] as const
+]
 
 const Home = () => {
   return (

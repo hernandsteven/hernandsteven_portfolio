@@ -9,7 +9,7 @@ const languages = [
   'SQL',
   'HTML',
   'CSS',
-] as const
+]
 const technologies = [
   'React',
   'Next.js',
@@ -19,7 +19,7 @@ const technologies = [
   'Supabase',
   'Zustand',
   'Redux',
-] as const
+]
 
 export default function About() {
   return (
