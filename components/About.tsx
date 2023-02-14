@@ -1,3 +1,4 @@
+'use client'
 import Tag from './Tag'
 
 const languages = [
@@ -20,6 +21,18 @@ const technologies = [
   'Zustand',
   'Redux',
 ]
+
+const downloadPDF = () => {
+  fetch('/STEVENHERNANDEZ.pdf').then((response) => {
+    response.blob().then((blob) => {
+      const fileURL = window.URL.createObjectURL(blob)
+      let alink = document.createElement('a')
+      alink.href = fileURL
+      alink.download = 'STEVENHERNANDEZ.pdf'
+      alink.click()
+    })
+  })
+}
 
 export default function About() {
   return (
@@ -63,7 +76,10 @@ export default function About() {
         </div>
       </div>
       <div className="mt-4 flex flex-col items-center gap-2">
-        <button className="w-fit rounded-md bg-gray-800 p-2 text-white transition  ease-in-out hover:bg-gray-700">
+        <button
+          onClick={() => downloadPDF()}
+          className="w-fit rounded-md bg-gray-800 p-2 text-white transition  ease-in-out hover:bg-gray-700"
+        >
           Download Resume
         </button>
       </div>
