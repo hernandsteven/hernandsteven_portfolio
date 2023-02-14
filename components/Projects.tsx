@@ -25,7 +25,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="flex w-full flex-col justify-center gap-4 border-t border-t-white "
+      className="flex w-full flex-col justify-center gap-4 border-t border-dashed border-t-white "
     >
       <h1 className="my-8 text-2xl">
         <b className="">Projects </b>

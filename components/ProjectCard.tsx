@@ -37,7 +37,7 @@ export default function ProjectCard({
           </div>
           <p className="p-2">{description}</p>
         </div>
-        <div className="flex flex-row ">
+        <div className="flex flex-row pl-2">
           <p className="background-clip-text bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text font-bold text-transparent">
             {' '}
             Try it{' '}

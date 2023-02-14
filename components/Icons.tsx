@@ -1,7 +1,7 @@
 export const UpRightArrow = () => {
   return (
     <svg
-      className="h-6 w-6 text-white"
+      className="h-6 w-6 text-white  transition ease-in-out hover:scale-105"
       width="20"
       height="20"
       viewBox="0 0 24 24"
@@ -22,7 +22,7 @@ export const UpRightArrow = () => {
 export const Github = () => {
   return (
     <svg
-      className="h-8 w-8 cursor-pointer text-white"
+      className="h-8 w-8 cursor-pointer text-white transition ease-in-out hover:scale-105"
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
@@ -39,7 +39,7 @@ export const Github = () => {
 export const LinkedIn = () => {
   return (
     <svg
-      className="h-8 w-8 cursor-pointer text-white"
+      className="h-8 w-8 cursor-pointer text-white transition ease-in-out hover:scale-105"
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
@@ -57,7 +57,7 @@ export const LinkedIn = () => {
 export const Mail = () => {
   return (
     <svg
-      className="h-8 w-8 cursor-pointer text-white"
+      className="h-8 w-8 cursor-pointer text-white  transition ease-in-out hover:scale-105"
       fill="none"
       viewBox="0 0 24 24"
       stroke="currentColor"
