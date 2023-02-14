@@ -1,91 +1,71 @@
+import About from '@/components/About'
+import { Github, LinkedIn, Mail } from '@/components/Icons'
+import Projects from '@/components/Projects'
 import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from './page.module.css'
+import avatar from '../public/avatar.png'
+import Link from 'next/link'
 
-const inter = Inter({ subsets: ['latin'] })
+const socials = [
+  {
+    name: 'Github',
+    href: 'https://github.com/hernandsteven',
+    icon: <Github />,
+  },
+  {
+    name: 'LinkedIn',
+    href: 'https://www.linkedin.com/in/hernandsteven99/',
+    icon: <LinkedIn />,
+  },
+  {
+    name: 'Mail',
+    href: 'mailto:hernandsteven@gmail.com',
+    icon: <Mail />,
+  },
+] as const
 
-export default function Home() {
+const Home = () => {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
+    <div className="flex flex-col gap-28 md:pl-8">
+      <section className="flex w-full flex-col gap-4 ">
+        <h1 className="text-4xl font-bold">Steven Hernandez</h1>
         <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
+          Hello there, I'm Steven. I'm a <b className="line-through">student</b>{' '}
+          <b>software engineer</b> who loves to build things.{' '}
         </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+        <div className="my-8 flex items-start">
+          <Image
+            alt="Steven Hernandez"
+            src={avatar}
+            height={150}
+            className="rounded-full "
+            placeholder="blur"
+            priority
+          />
+          <div className="my-auto ml-8 flex flex-col gap-2">
+            {socials.map(({ name, href, icon }) => (
+              <Link
+                target="_blank"
+                key={name}
+                href={href}
+                className="flex items-center gap-2"
+              >
+                {icon}
+              </Link>
+            ))}
+          </div>
         </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-        <div className={styles.thirteen}>
-          <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
-        </div>
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+        <p>
+          A software engineer with entry-level experience specializing in full
+          stack development. Including expertise in TypeScript, React, SQL, and
+          Agile software development. Committed to building high-quality user
+          Interfaces and backend API’s. Passionate about learning emerging
+          technologies and continuously expanding technical knowledge.
+        </p>
+      </section>
+      <About />
+      <Projects />
+    </div>
   )
 }
+
+export default Home
