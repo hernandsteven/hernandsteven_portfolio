@@ -35,7 +35,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="flex w-full flex-col justify-center gap-4 border-t border-dashed border-t-white "
+      className="flex w-full flex-col justify-center gap-4 "
     >
       <motion.h1
         ref={projectsRef}
@@ -47,7 +47,7 @@ export default function Projects() {
         <b className="">Projects </b>
       </motion.h1>
 
-      <div className="flex flex-col gap-24 ">
+      <div className="flex flex-col items-center gap-24 ">
         {projectData.map(({ name, description, href, imageSrc, tags }) => (
           <ProjectCard
             key={name}

@@ -47,14 +47,14 @@ export default function About() {
   return (
     <section
       id="about"
-      className="flex min-h-screen flex-col justify-center gap-4 border-t border-dashed border-t-white "
+      className=" flex min-h-screen flex-col justify-center gap-6 "
     >
       <motion.h1
         ref={aboutRef}
         variants={headerSlideInFromLeft}
         initial="initial"
         animate={isInView ? 'animate' : 'initial'}
-        className=" mt-20 text-2xl "
+        className=" text-2xl "
       >
         <b className="">About Me</b>
       </motion.h1>
@@ -71,8 +71,8 @@ export default function About() {
         software engineer. I started learning how to code, beginning with Java,
         which gave me the foundation to learn other programming languages.
       </p>
-      <div className="mt-4 grid grid-cols-2 border-t border-dashed">
-        <div className="flex h-28 flex-col gap-4 border-r border-dashed p-4">
+      <div className="min-h-48 mt-4 grid grid-rows-1 gap-8 md:grid-cols-2  ">
+        <div className="flex h-28 flex-col gap-4 ">
           <motion.h1
             initial={{ opacity: 0, x: -50 }}
             whileInView={{
@@ -99,7 +99,7 @@ export default function About() {
             ))}
           </motion.div>
         </div>
-        <div className="flex flex-col gap-4 p-4 ">
+        <div className="flex flex-col gap-4 ">
           <motion.h1
             initial={{ opacity: 0, x: 50 }}
             whileInView={{
@@ -119,7 +119,7 @@ export default function About() {
               opacity: 1,
               y: 0,
               transition: {
-                delay: 0.5,
+                delay: 1,
                 duration: 0.8,
               },
             }}
@@ -132,15 +132,16 @@ export default function About() {
           </motion.div>
         </div>
       </div>
-      <div className="mt-4 flex flex-col items-center gap-2">
+      <div className="mt-8 flex flex-col items-center gap-2">
         <button
           onClick={() => downloadPDF()}
-          className="mt-10 flex w-fit flex-row items-center gap-2 rounded-md border border-gray-800 bg-gradient-to-t from-gray-800 to-transparent p-2 text-white shadow-sm shadow-gray-800 transition  ease-in-out hover:bg-gray-700"
+          className="flex w-fit flex-row items-center gap-2 rounded-md border border-gray-800 bg-gradient-to-t from-gray-800 to-transparent p-2 text-white shadow-sm shadow-gray-800 transition  ease-in-out hover:bg-gray-700"
         >
           <Download />
           Download Resume
         </button>
       </div>
+      <hr />
     </section>
   )
 }

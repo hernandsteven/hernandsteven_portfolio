@@ -20,15 +20,14 @@ export default function ProjectCard({
   return (
     <Link
       href={href ?? 'https://google.com'}
-      className=" flex max-w-full cursor-pointer  rounded-md border-[0.1px] border-gray-800 p-2 shadow-xl shadow-gray-800 transition ease-in-out hover:scale-105 hover:shadow-2xl hover:shadow-gray-700 md:flex-row "
-      style={{ overflow: 'hidden' }}
+      className=" flex w-5/6 cursor-pointer  rounded-md border-[0.1px] border-gray-800 p-2 shadow-xl shadow-gray-800 transition ease-in-out hover:scale-105 hover:shadow-2xl hover:shadow-gray-700 md:flex-row "
     >
       <div className="flex w-full flex-col justify-between md:w-1/2">
         <div>
           <h1 className="w-full rounded bg-gray-800 p-2 text-2xl font-bold">
             {name}
           </h1>
-          <div className="flex flex-row gap-2 p-2">
+          <div className="flex flex-row flex-wrap gap-2 p-2">
             {tags?.map((tag, idx) => (
               <span key={idx} className="text-sm font-bold text-gray-400">
                 {tag}

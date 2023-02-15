@@ -43,7 +43,7 @@ export default function Sidebar() {
           variants={item}
           initial="hidden"
           animate="visible"
-          className="px-4 pb-4 text-4xl font-bold md:text-6xl "
+          className="px-4 pb-2 text-4xl font-bold md:text-6xl "
         >
           sh.
         </motion.h1>
@@ -56,7 +56,7 @@ export default function Sidebar() {
           >
             {navItems.map(({ name, href }) => (
               <motion.a
-                className=" mx-4 my-auto  rounded-md text-xl md:mx-0  md:my-12 md:text-2xl "
+                className=" text-l mx-4  my-auto rounded-md md:mx-0  md:my-12 md:text-2xl "
                 href={href}
                 key={name}
                 variants={item}

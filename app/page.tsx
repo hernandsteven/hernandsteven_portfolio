@@ -62,6 +62,7 @@ const Home = () => {
           technologies and continuously expanding technical knowledge.
         </p>
       </section>
+      <hr />
       <About />
       <Projects />
     </div>
