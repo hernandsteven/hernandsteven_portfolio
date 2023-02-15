@@ -35,7 +35,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="flex w-full flex-col justify-center gap-4 "
+      className="mb-20 flex w-full flex-col justify-center gap-4 "
     >
       <motion.h1
         ref={projectsRef}
