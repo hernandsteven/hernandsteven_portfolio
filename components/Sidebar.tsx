@@ -56,12 +56,14 @@ export default function Sidebar() {
           >
             {navItems.map(({ name, href }) => (
               <motion.a
-                className=" text-l mx-4  my-auto rounded-md md:mx-0  md:my-12 md:text-2xl "
+                className=" text-l mx-4 my-auto rounded-md  md:mx-0  md:my-12 md:text-2xl "
                 href={href}
                 key={name}
                 variants={item}
               >
-                {name}
+                <p className="p-2 transition ease-in-out hover:text-gray-400 ">
+                  {name}
+                </p>
               </motion.a>
             ))}
           </motion.nav>

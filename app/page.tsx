@@ -28,7 +28,7 @@ const Home = () => {
     <div className="mt-2 flex flex-col gap-28 md:mt-0 md:pl-8">
       <section className="flex w-full flex-col gap-4 ">
         <h1 className="text-6xl font-bold">Steven Hernandez</h1>
-        <p>
+        <p className="w-fit rounded md:border md:border-gray-800 md:bg-gray-900 md:p-2 md:shadow-sm md:shadow-gray-800">
           Hello there, I'm Steven. I'm a <b className="line-through">student</b>{' '}
           <b>software engineer</b> who loves to build things.{' '}
         </p>
