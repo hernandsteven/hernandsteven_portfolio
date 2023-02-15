@@ -73,10 +73,24 @@ export default function About() {
       </p>
       <div className="mt-4 grid grid-cols-2 border-t border-dashed">
         <div className="flex h-28 flex-col gap-4 border-r border-dashed p-4">
-          <h1 className="text-xl font-bold"> Languages I Speak </h1>
+          <motion.h1
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+              transition: { delay: 0.5, duration: 0.8 },
+            }}
+            className="text-xl font-bold"
+          >
+            {' '}
+            Languages I Speak{' '}
+          </motion.h1>
           <motion.div
             initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1, y: 0, transition: { delay: 0.5 } }}
+            whileInView={{
+              opacity: 1,
+              transition: { delay: 0.5, duration: 0.8 },
+            }}
             viewport={{ margin: '0px 100px -50px 0px' }}
             className="flex flex-wrap gap-2 "
           >
@@ -86,7 +100,18 @@ export default function About() {
           </motion.div>
         </div>
         <div className="flex flex-col gap-4 p-4 ">
-          <h1 className="text-xl font-bold"> Technologies I Use</h1>
+          <motion.h1
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+              transition: { delay: 1, duration: 0.8 },
+            }}
+            className="text-xl font-bold"
+          >
+            {' '}
+            Technologies I Use
+          </motion.h1>
 
           <motion.div
             initial={{ opacity: 0 }}
@@ -95,6 +120,7 @@ export default function About() {
               y: 0,
               transition: {
                 delay: 0.5,
+                duration: 0.8,
               },
             }}
             viewport={{ margin: '0px 100px -50px 0px' }}
