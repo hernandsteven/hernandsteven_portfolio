@@ -1,3 +1,4 @@
+import { AnalyticsWrapper } from '@/components/analytics'
 import Footer from '@/components/Footer'
 import Sidebar from '@/components/Sidebar'
 import './globals.css'
@@ -18,6 +19,7 @@ export default function RootLayout({
           </main>
         </div>
         <Footer />
+        <AnalyticsWrapper />
       </body>
     </html>
   )
