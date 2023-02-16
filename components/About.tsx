@@ -91,7 +91,7 @@ export default function About() {
               transition: { delay: 0.5, duration: 0.8 },
             }}
             viewport={{ margin: '0px 100px -50px 0px' }}
-            className="flex flex-wrap gap-2 "
+            className="flex flex-wrap justify-center gap-2 md:justify-start "
           >
             {languages.map((language) => (
               <Tag key={language} tag={language} />
@@ -122,7 +122,7 @@ export default function About() {
               },
             }}
             viewport={{ margin: '0px 100px -50px 0px' }}
-            className="flex flex-wrap gap-2 "
+            className="flex flex-wrap justify-center gap-2 md:justify-start "
           >
             {technologies.map((tech) => (
               <Tag key={tech} tag={tech} />

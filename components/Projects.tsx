@@ -42,6 +42,7 @@ export default function Projects() {
         variants={headerSlideInFromLeft}
         initial="initial"
         animate={isInView ? 'animate' : 'initial'}
+        viewport={{ margin: '0px 100px -50px 0px' }}
         className="self-center text-2xl md:self-start"
       >
         <b className="">Projects </b>
