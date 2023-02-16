@@ -42,12 +42,12 @@ export default function Projects() {
         variants={headerSlideInFromLeft}
         initial="initial"
         animate={isInView ? 'animate' : 'initial'}
-        className="my-8 text-2xl"
+        className="self-center text-2xl md:self-start"
       >
         <b className="">Projects </b>
       </motion.h1>
 
-      <div className="flex flex-col items-center gap-24 ">
+      <div className="flex flex-col items-center gap-24 md:items-start ">
         {projectData.map(({ name, description, href, imageSrc, tags }) => (
           <ProjectCard
             key={name}

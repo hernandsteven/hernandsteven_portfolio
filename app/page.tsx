@@ -2,7 +2,7 @@ import About from '@/components/About'
 import { Github, LinkedIn, Mail } from '@/components/Icons'
 import Projects from '@/components/Projects'
 import Image from 'next/image'
-import avatar from '../public/avatar.png'
+import avatar from '@/public/avatar.jpg'
 import Link from 'next/link'
 
 const socials = [
@@ -27,17 +27,18 @@ const Home = () => {
   return (
     <div className="mt-2 flex flex-col gap-28 md:mt-0 md:pl-8">
       <section className="flex w-full flex-col gap-4 ">
-        <h1 className="text-6xl font-bold">Steven Hernandez</h1>
-        <p className="w-fit rounded md:border md:border-gray-800 md:bg-gray-900 md:p-2 md:shadow-sm md:shadow-gray-800">
+        <h1 className="text-6xl font-bold ">Steven Hernandez</h1>
+        <p className="w-fit text-gray-200 ">
           Hello there, I'm Steven. I'm a <b className="line-through">student</b>{' '}
-          <b>software engineer</b> who loves to build things.{' '}
+          <b>software engineer</b> who loves to build things.
         </p>
         <div className="my-8 flex items-start">
           <Image
             alt="Steven Hernandez"
             src={avatar}
             height={150}
-            className="rounded-full "
+            width={150}
+            className="rounded-full grayscale "
             placeholder="blur"
             priority
           />

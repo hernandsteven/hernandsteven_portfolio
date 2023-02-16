@@ -20,7 +20,7 @@ export default function ProjectCard({
   return (
     <Link
       href={href ?? 'https://google.com'}
-      className=" flex w-5/6 cursor-pointer  rounded-md border-[0.1px] border-gray-800 p-2 shadow-xl shadow-gray-800 transition ease-in-out hover:scale-105 hover:shadow-2xl hover:shadow-gray-700 md:flex-row "
+      className=" flex w-11/12  cursor-pointer rounded-md border-[0.1px] border-gray-800 p-1 shadow-xl shadow-gray-800 transition ease-in-out hover:scale-105 hover:shadow-2xl hover:shadow-gray-700 md:flex-row "
     >
       <div className="flex w-full flex-col justify-between md:w-1/2">
         <div>

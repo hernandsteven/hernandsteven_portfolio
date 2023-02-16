@@ -47,14 +47,14 @@ export default function About() {
   return (
     <section
       id="about"
-      className=" flex min-h-screen flex-col justify-center gap-6 "
+      className="flex min-h-screen flex-col justify-center gap-6 "
     >
       <motion.h1
         ref={aboutRef}
         variants={headerSlideInFromLeft}
         initial="initial"
         animate={isInView ? 'animate' : 'initial'}
-        className=" text-2xl "
+        className="self-center text-2xl md:self-start "
       >
         <b className="">About Me</b>
       </motion.h1>
@@ -72,7 +72,7 @@ export default function About() {
         which gave me the foundation to learn other programming languages.
       </p>
       <div className="min-h-48 mt-4 grid grid-rows-1 gap-8 md:grid-cols-2  ">
-        <div className="flex h-28 flex-col gap-4 ">
+        <div className="flex h-28 flex-col gap-6 ">
           <motion.h1
             initial={{ opacity: 0, x: -50 }}
             whileInView={{
@@ -80,10 +80,9 @@ export default function About() {
               x: 0,
               transition: { delay: 0.5, duration: 0.8 },
             }}
-            className="text-xl font-bold"
+            className="self-center text-xl md:self-start "
           >
-            {' '}
-            Languages I Speak{' '}
+            <b>Languages I Speak</b>
           </motion.h1>
           <motion.div
             initial={{ opacity: 0 }}
@@ -99,7 +98,7 @@ export default function About() {
             ))}
           </motion.div>
         </div>
-        <div className="flex flex-col gap-4 ">
+        <div className="flex flex-col gap-6 ">
           <motion.h1
             initial={{ opacity: 0, x: 50 }}
             whileInView={{
@@ -107,10 +106,9 @@ export default function About() {
               x: 0,
               transition: { delay: 1, duration: 0.8 },
             }}
-            className="text-xl font-bold"
+            className="self-center text-xl md:self-start "
           >
-            {' '}
-            Technologies I Use
+            <b>Technologies I Use</b>
           </motion.h1>
 
           <motion.div
@@ -132,7 +130,7 @@ export default function About() {
           </motion.div>
         </div>
       </div>
-      <div className="mt-8 flex flex-col items-center gap-2">
+      <div className="mt-6 flex flex-col items-center gap-2">
         <button
           onClick={() => downloadPDF()}
           className="flex w-fit flex-row items-center gap-2 rounded-md border border-gray-800 bg-gradient-to-t from-gray-800 to-transparent p-2 text-white shadow-sm shadow-gray-800 transition  ease-in-out hover:bg-gray-700"
@@ -141,7 +139,7 @@ export default function About() {
           Download Resume
         </button>
       </div>
-      <hr />
+      <hr className="mt-6" />
     </section>
   )
 }
