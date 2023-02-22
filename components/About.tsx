@@ -15,6 +15,7 @@ const languages = [
   'HTML',
   'CSS',
 ]
+
 const technologies = [
   'React',
   'Next.js',
@@ -68,8 +69,8 @@ export default function About() {
         <br />
         In my sophomore year of high school, I discovered programming, and it
         was love at first sight. I knew right away that I wanted to be a
-        software engineer. I started learning how to code, beginning with Java,
-        which gave me the foundation to learn other programming languages.
+        software engineer. I started learning how to code websites using HTML,
+        CSS, and JQuery.
       </p>
       <div className="min-h-48 mt-4 grid grid-rows-1 gap-8 md:grid-cols-2  ">
         <div className="flex h-28 flex-col gap-6 ">
